@@ -4,6 +4,7 @@
     Author     : Руслан
 --%>
 
+<%@page import="Test.TestConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,5 +18,7 @@
         <h3>
             ${param["password"]}
         </h3>
+            <% TestConnection ts = new TestConnection();%>
+            <%= ts.check()%>
     </body>
 </html>
